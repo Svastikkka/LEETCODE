@@ -29,11 +29,8 @@ class Solution:
             if start_col < end_col:
                 arr.extend([matrix[i][start_col] for i in range(end_row-1,start_row-1,-1)])
             start_col+=1
-        print(arr)
-
-
-
+        return arr
 
 s=Solution()
-arr=[[1,2,3,4],[5,6,7,8],[9,10,11,12]]
-s.spiralOrder(arr)
+arr1=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+print(s.spiralOrder(arr1))
