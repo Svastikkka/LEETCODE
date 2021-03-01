@@ -10,6 +10,7 @@ def numIslands(grid)->int:
 
 
 def dfs(grid, i, j):
+    #base condition for boundries
     if (i < 0 or j < 0 or i >= len(grid) or j >= len(grid[i]) or grid[i][j] == '0'):
         return 0
     grid[i][j] = '0'
