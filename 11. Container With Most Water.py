@@ -3,20 +3,20 @@
 """
 
 def maxArea(height):
-    maxArea=0
+    result=0
     left=0
-    right=len(height)-1
-    while left<right:
-        width=abs(left-right)
-        if height[left]<height[right]:
-            res=width*height[left]
-            left+=1
-        else:
-            res=width*height[right]
+    right=len(arr)-1
+    while (left<right):
+        width = right-left
+        length = min(arr[left],arr[right])
+        area=length*width
+        result = max(area,result)
+
+        if arr[left]>arr[right]:
             right-=1
-        if res>maxArea:
-            maxArea=res
-    return maxArea
+        else:
+            left+=1
+    return result
 
 
 
